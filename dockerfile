@@ -1,4 +1,5 @@
-FROM node:18-alphine as build
+#build stage
+FROM node:18-alpine as build
 
 WORKDIR /usr/src/app
 
@@ -10,10 +11,10 @@ COPY . .
 
 RUN npm install --global yarn
 
-RUN npm run build
+RUN yarn build
 
 #prod stage
-FROM node:18-alphine
+FROM node:18-alpine
 
 WORKDIR /usr/src/app
 
