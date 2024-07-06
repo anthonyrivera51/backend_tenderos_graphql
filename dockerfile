@@ -7,6 +7,8 @@ COPY package*.json ./
 
 RUN npm install -g npm@10.8.1
 
+RUN npm i -g @nestjs/cli
+
 RUN npm install
 
 COPY . .
