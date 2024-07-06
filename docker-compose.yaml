@@ -4,7 +4,7 @@ services:
   backend:
     build: ./
     container_name: nestjs_graphql
-    enviroment:
+    environment:
       - APP_NAME=Marvel
       - PORT=4000
       - DEFAULT_CURRENCY=USD
