@@ -22,7 +22,7 @@ ENV NODE_ENV=${prod}
 ENV PORT=4000
 ENV DEFAULT_CURRENCY=USD
 
-COPY --FROM=build /usr/src/app/dist ./dist
+COPY --from=build /usr/src/app/dist ./dist
 
 COPY package*.json ./
 
