@@ -13,9 +13,7 @@ RUN npm install --f
 
 COPY . .
 
-RUN npm install --global yarn
-
-RUN yarn build
+RUN npm run build
 
 #prod stage
 FROM node:18-alpine
