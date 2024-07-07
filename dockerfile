@@ -9,7 +9,7 @@ RUN npm install --f
 
 COPY . .
 
-RUN npm run build
+RUN yarn build
 
 #prod stage
 FROM node:18-alpine
@@ -25,7 +25,7 @@ COPY --from=build /usr/src/app/dist ./dist
 
 COPY package*.json ./
 
-RUN npm install --only=production
+RUN npm install --only=production --f
 
 RUN rm package*.json
 
