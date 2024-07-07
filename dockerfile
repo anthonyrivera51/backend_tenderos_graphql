@@ -6,6 +6,7 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 
 ENV GENERATE_SOURCEMAP=false
+ENV NODE_OPTIONS=--max-old-space-size=2048
 
 RUN npm install --f
 
