@@ -9,8 +9,6 @@ RUN npm install --f
 
 COPY . .
 
-RUN export NODE_OPTIONS=--max_old_space_size=4096
-
 RUN npm run build
 
 #prod stage
