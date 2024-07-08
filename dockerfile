@@ -20,7 +20,7 @@ FROM node:21.7.2-slim
 WORKDIR /usr/src/app
 
 ARG prod=production
-ENV NODE_ENV=${prod}
+ENV NODE_ENV=${QA}
 ENV PORT=4000
 ENV DEFAULT_CURRENCY=USD
 
