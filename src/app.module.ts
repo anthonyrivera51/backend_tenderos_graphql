@@ -46,14 +46,12 @@ import { FlashSaleRequestModule } from './flash-sale-requests/flash-sale-request
 
 @Module({
   imports: [
-    GraphQLModule.forRoot({
-      autoSchemaFile: true, // Opcional, si estás usando autogeneración de esquema
-      introspection: true, // Habilitar introspección
-      playground: true, // Opcional, habilitar Playground en entorno de desarrollo
-    }),
     ConfigModule.forRoot(),
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
+      autoSchemaFile: true, // Opcional, si estás usando autogeneración de esquema
+      introspection: true, // Habilitar introspección
+      playground: true, // Opcional, habilitar Playground en entorno de desarrollo
     }),
     StripeModule.forRoot({
       apiKey: process.env.STRIPE_API_KEY,
